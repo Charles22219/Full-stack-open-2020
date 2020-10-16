@@ -1,0 +1,10 @@
+user->browser: clicks save
+
+note over browser:
+prevent default handling of form submit
+end note
+note over browser:
+rerender notelist with new note through notes.push(note)
+end note
+browser->server: HTTP POST https://studies.cs.helsinki.fi/exampleapp/new_note_spa
+server-->browser: status code 201 created
